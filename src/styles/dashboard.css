@@ -1,0 +1,54 @@
+/* src/styles/dashboard.css */
+
+/* Import Tailwind */
+@import "tailwindcss";
+
+/* ---------------- THEME COLORS ---------------- */
+
+:root {
+  --color-brand: #a7a7b9;        /* Indigo 600 */
+  --color-brand-hover: #191172;  /* Indigo 700 */
+  --color-brand-soft: #030b23;   /* Indigo 50 */
+  --color-legal-dark: #102f77;   /* Slate 900 */
+  --color-legal-panel: #0b2252;  /* Slate 800 */
+}
+
+/* ---------------- BASE STYLES ---------------- */
+
+@layer base {
+  body {
+    background: var(--color-legal-dark);
+    @apply text-slate-200 antialiased;
+  }
+}
+
+/* ---------------- COMPONENT STYLES ---------------- */
+
+@layer components {
+
+  /* Glass dashboard cards */
+  .glass-card {
+  @apply border rounded-xl shadow-xl;
+}
+  .glass-card:hover {
+    border-color: rgba(79, 70, 229, 0.4);
+    transform: translateY(-2px);
+  }
+
+}
+
+/* ---------------- DASHBOARD BACKGROUND ---------------- */
+
+.dashboard-bg {
+  background: radial-gradient(
+      circle at top left,
+      rgba(191, 190, 208, 0.15),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(194, 194, 207, 0.1),
+      transparent 40%
+    ),
+    var(--color-legal-dark);
+}

@@ -4,6 +4,7 @@ import LegalLensDashboard from "./pages/LegalLensDashboard";
 import CasesPage from "./pages/CasesPage";
 import CaseDetails from "./components/CaseDetails";
 import CreatePage from "./pages/CreatePage";
+import MembersPage from "./pages/MembersPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" element={<LegalLensDashboard />} />
             <Route path="/cases" element={<CasesPage />} />
             <Route path="/cases/:caseId" element={<CaseDetails />} />
+            <Route path="/add-members" element={<MembersPage />} />
           </Routes>
         </div>
       </div>
